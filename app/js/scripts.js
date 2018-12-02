@@ -138,18 +138,7 @@ $( "#datepicker" ).datepicker();
     ];
 	
 	
-    /*$( "#tags" ).autocomplete({
-      source: availableTags
-    });*/
-	
-	$( "#tags" ).autocomplete({
-  source: function( request, response ) {
-          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
-          response( $.grep( availableTags, function( item ){
-              return matcher.test( item );
-          }) );
-      }
-});//on cherche que à partir de la premiere lettre, si on veut toutes les lettres des noms etc il faut enlever ce morceaux de codes
+  
 	
 	
 /*******************************************************************************************/
@@ -246,7 +235,7 @@ $('#inscription').validetta({
 	  
 	$.ajax({
 		// 1) on définit le fichier vers lequel on envoye la requête POST
-		url: '../php/inscription.php',
+		url: '../index.html',
 		// 2/ on spécifie la méthode  
 		type:'POST',
 		// 3) on définit les variables POST qui sont ennvoyées au fichier .php
