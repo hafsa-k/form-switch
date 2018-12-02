@@ -1,0 +1,65 @@
+@import "custom";
+@import "bootstrap";
+@import "validetta";
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+
+// BAKCGROUND //
+
+
+
+#gradient
+{
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  color:#000;
+}
+
+// VALIDETTA //
+
+.validetta-valid input {
+	
+	background-image:url(https://previews.123rf.com/images/ahasoft2000/ahasoft20001701/ahasoft2000170110307/70427502-ok-ic%C3%B4ne-arrondie-style-d-illustration-vectorielle-est-symbole-embl%C3%A9matique-plat-%C3%A0-l-int%C3%A9rieur-d-un-.jpg);
+	background-size: 25px;
+    background-repeat: no-repeat;
+    text-align:left;
+    background-position:right;
+   
+    
+	
+	
+}
+
+// FORMULAIRES //
+
+h1{
+    margin-top: 50px;
+    margin-bottom:30px;
+    color: #b22caf;
+    font-family: 'Arimo', sans-serif;
+}
+
+
+label{
+    margin-bottom:0px;
+    
+}
+
+.connection{
+    margin-top:200px;
+    text-align:right;
+}
+
+
+// BLOC //
+
+#carree{
+background-color:#fff;
+width:40%;
+height:100vh;
+position:absolute;
+left:10%;
+}
