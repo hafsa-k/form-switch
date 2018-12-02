@@ -198,6 +198,7 @@ jQuery(function($){
       buttonImage: "../css/images/calendar.gif",
       buttonImageOnly: true,
       buttonText: "Select date",
+      yearRange : '-100:+0',
       changeMonth: true,
       changeYear: true
 		};
