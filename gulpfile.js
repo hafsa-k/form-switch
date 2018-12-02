@@ -1,6 +1,8 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var concat = require('gulp-concat'); 
+var rename = require('gulp-rename');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -22,3 +24,12 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', ['serve']);
+
+var jsFiles = 'app/js/concat-js/*.js', 
+jsDest='app/js'; 
+
+gulp.task('scripts',function(){ 
+return gulp.src(jsFiles) 
+.pipe(concat('scripts.js')) 
+.pipe(gulp.dest(jsDest)); 
+});
