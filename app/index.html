@@ -21,7 +21,7 @@
 <form id="inscription" class="gauche">
 <h1 >Inscription</h1>
 <div class="form-group ">
- <div id="contenu"></div>   
+ <div id="contenu">   
     
 
 
@@ -84,12 +84,13 @@
 <input id="inscrit" class="btn btn-success" value="s'inscrire" type="submit"/>
    
 <button id="dejainscrit" class="btn btn-secondary">Déjà inscrit?</button>
-    
-    </div>
+    </div> <!-- Fin contenu-->
+    </div> <!-- fin form group-->
     
 
     
 </form> <!-- formulaire inscription -->
+
 </div> <!-- col 6 formulaire inscription -->
 
 
@@ -103,16 +104,17 @@
     <h1>Connection</h1>
      <div id="contenu2"></div>
     
-    	
+   <div class="form-group">  	
 <input id="identifiant" name="identifiant" placeholder="email" data-validetta="required,email">
-
+    </div>
 	
-	<br>
-   <br>
+
+   
+   <div class="form-group">
+<input id="mdp3" name="mdp3" placeholder="mot de passe" data-validetta="required" >
+    </div>
     
-<input id="motdepasse" name="motdepasse" placeholder="mot de passe" data-validetta="required">
-   <br>
-   <br>
+  
     
       <input id="go" class="btn btn-success" value="se connecter" type="submit"/>
     <button id="goinscri" class="btn btn-danger">Pas encore inscrit?</button>
