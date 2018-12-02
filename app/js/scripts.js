@@ -253,8 +253,9 @@ jQuery(function($){
 
 
 	//--------------------- INSCRIPTION---------------------- //
+
     
-$('#inscription').validetta({
+$('#inscription, #inscrit').validetta({
   onValid : function( event ) {
     event.preventDefault(); // Will prevent the submission of the form
    
@@ -262,20 +263,16 @@ $('#inscription').validetta({
  
  // ici faire la requête ajax
 
-	 var email = $("#email").val();
-      var nom = $("#nom").val();
-      var prenom = $("#prenom").val();
-      var chiffre = $("#cp").val();
-      var commune = $("#ville").val();
-      var date = $("#datepicker").val();
-	  
-	$.ajax({
+	 var donnees = $("#inscription, #inscrit").serialize();
+	
+      
+      $.ajax({
 		// 1) on définit le fichier vers lequel on envoye la requête POST
-		url: '../index.html',
+		url: 'php.php',
 		// 2/ on spécifie la méthode  
 		type:'POST',
 		// 3) on définit les variables POST qui sont ennvoyées au fichier .php
-		data : email,
+		data : donnees,
         
 		 // 4) format de retour du fichier php dans "data"
 		dataType: 'html',
@@ -283,7 +280,7 @@ $('#inscription').validetta({
 		success : function(data){
 			//$("#form").hide; si on veut faire disparaitre le formulaire
 			$("#contenu").html(data);
-			
+			$("#inscription,#contenu,#row").hide();
 		}//success
 		
 	})  //ajax fonction
@@ -311,7 +308,7 @@ $('#inscription').validetta({
 // ------------------CONNECTION -------------------------------//
     
     
-$('#connection').validetta({
+$('#connection, #go').validetta({
   onValid : function( event ) {
     event.preventDefault(); // Will prevent the submission of the form
    
@@ -319,21 +316,22 @@ $('#connection').validetta({
  
  // ici faire la requête ajax
 	  
-	 var email = $("#identifiant").val();
+	var donnees2 = $("#connection, #go").serialize();
 	  
 	$.ajax({
 		// 1) on définit le fichier vers lequel on envoye la requête POST
-		url: './php.php',
+		url: 'php.php',
 		// 2/ on spécifie la méthode  
 		type:'POST',
 		// 3) on définit les variables POST qui sont ennvoyées au fichier .php
-		data : email,
+		data : donnees2,
 		 // 4) format de retour du fichier php dans "data"
 		dataType: 'html',
 		// 5) fonction à effectuer en cas de succès
 		success : function(data){
 			//$("#form").hide; si on veut faire disparaitre le formulaire
 			$("#contenu2").html(data);
+            $("#connection,#contenu2,#go").hide();
 			
 		}//success
 			
